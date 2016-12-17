@@ -13,10 +13,7 @@
                     </div>
                     <div class="grid_4 text-right mobile-text-center">
                         <nav id="social-nav" role="navigation">
-                            <div class="container">
-                                <?php wp_nav_menu(array( 'theme_location' => 'social_navigation' )); ?>
-                                <div class="clear"></div>
-                            </div>
+                            <?php wp_nav_menu(array( 'theme_location' => 'social_navigation' )); ?>
                         </nav>
                     </div>
                 </div>
