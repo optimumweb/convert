@@ -6,24 +6,15 @@
             <?php wpbp_header_inside_before(); ?>
             <div id="top-bar">
                 <div class="<?php wpbp_container_class(); ?>">
-                    <div class="grid_6 mobile-center">
+                    <div class="grid_8 mobile-center">
                         <div id="site-description">
                             <?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>
                         </div>
                     </div>
-                    <div class="grid_6 text-right mobile-center">
-                        <ul id="site-toolbar">
-                            <?php if ( function_exists('of_get_option') && of_get_option('tel') ) : ?>
-                                <li id="site-tel">
-                                    <i class="fa fa-phone"></i> <?php echo of_get_option('tel'); ?>
-                                </li>
-                            <?php endif; ?>
-                            <li>
-                                <nav id="social-nav" role="navigation">
-                                    <?php wp_nav_menu(array( 'theme_location' => 'social_navigation' )); ?>
-                                </nav>
-                            </li>
-                        </ul>
+                    <div class="grid_4 text-right mobile-center">
+                        <nav id="social-nav" role="navigation">
+                            <?php wp_nav_menu(array( 'theme_location' => 'social_navigation' )); ?>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -40,13 +31,22 @@
                     </h1>
                 </div>
                 <div class="grid_8 text-right mobile-center">
-                    <nav id="main-nav" role="navigation">
-                        <?php wp_nav_menu(array( 'theme_location' => 'primary_navigation' )); ?>
-                    </nav>
+                    <?php if ( function_exists('of_get_option') && of_get_option('tel') ) : ?>
+                        <div id="site-tel">
+                            <i class="fa fa-phone"></i> <?php echo of_get_option('tel'); ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
             <?php wpbp_header_inside_after(); ?>
         </header>
+        <nav id="main-nav" role="navigation">
+            <div class="<?php wpbp_container_class(); ?>">
+                <div class="grid_12">
+                    <?php wp_nav_menu(array( 'theme_location' => 'primary_navigation' )); ?>
+                </div>
+            </div>
+        </nav>
         <?php wpbp_header_after(); ?>
         <?php if ( is_front_page() ) : ?>
             <section id="hero">
