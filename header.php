@@ -12,7 +12,7 @@
                         </div>
                     </div>
                     <div class="grid_2 text-center">
-                        <?php if ( of_get_option('tel') ) : ?>
+                        <?php if ( function_exists('of_get_option') && of_get_option('tel') ) : ?>
                             <div id="site-tel">
                                 <i class="fa fa-phone"></i> <?php echo of_get_option('tel'); ?>
                             </div>
