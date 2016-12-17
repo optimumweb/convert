@@ -1,12 +1,4 @@
-
 /* =============================================================================
-   Theme
+   Variables
    ========================================================================== */
-
-body {
-  font-family: @baseFontFamily;
-}
-
-h1, h2, h3 {
-  font-family: @hFontFamily;
-}
+body{font-family:'Open Sans',sans-serif}h1,h2,h3{font-family:'Arvo',serif}
