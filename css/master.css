@@ -1,4 +1,4 @@
 /* =============================================================================
    Variables
    ========================================================================== */
-body{font-family:'Open Sans',sans-serif}h1,h2,h3{font-family:'Arvo',serif}#top{font-size:.875em;background-color:#eee;padding:.5em 0}#site-title{margin:0}
+body{font-family:'Open Sans',sans-serif}h1,h2,h3{font-family:'Arvo',serif}#header #top{font-size:.875em;background-color:#eee;padding:.5em 0}#header #top #social-nav{text-align:right}#header #site-title{margin:0;text-align:left}#header #main-nav{text-align:right}@media screen and (max-width: 40rem){#header #top #site-description{ text-align:center}#header #top #social-nav{text-align:center}#header #site-title{text-align:center}#header #main-nav{text-align:center}}
