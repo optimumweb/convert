@@ -4,7 +4,7 @@
     <?php wpbp_header_before(); ?>
         <header id="header" role="banner">
             <?php wpbp_header_inside_before(); ?>
-            <div id="top">
+            <div id="top-bar">
                 <div class="<?php wpbp_container_class(); ?>">
                     <div class="grid_8">
                         <div id="site-description">

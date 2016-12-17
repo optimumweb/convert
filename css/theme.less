@@ -5,6 +5,7 @@
 
 body {
   font-family: @baseFontFamily;
+  color: @textColor;
 }
 
 h1, h2, h3 {
@@ -12,9 +13,10 @@ h1, h2, h3 {
 }
 
 #header {
-  #top {
+  #top-bar {
     font-size: 0.875em;
-    background-color: @lightGrey;
+    color: @white;
+    background-color: @darkGrey;
     padding: 0.5em 0;
 
     #social-nav {
@@ -29,6 +31,7 @@ h1, h2, h3 {
   }
 
   #main-nav {
+    font-size: 0.875em;
     padding: 2em 0;
     text-align: right;
     text-transform: uppercase;
@@ -40,7 +43,9 @@ h1, h2, h3 {
     }
 
     a {
+      display: block;
       color: @textColor;
+      letter-spacing: 0.01875em;
     }
   }
 }
