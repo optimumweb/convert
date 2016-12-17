@@ -12,41 +12,54 @@ h1, h2, h3 {
   font-family: @hFontFamily;
 }
 
-#header {
-  #top-bar {
-    font-size: 0.875em;
+h1 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+#top-bar {
+  font-size: 0.875em;
+  color: @white;
+  background-color: @darkGrey;
+  padding: 0.5em 0;
+
+  a {
     color: @white;
-    background-color: @darkGrey;
-    padding: 0.5em 0;
-
-    #social-nav {
-      text-align: right;
-    }
   }
 
-  #site-title {
-    margin: 0;
-    padding: 1em 0;
-    text-align: left;
-  }
-
-  #main-nav {
-    font-size: 0.875em;
-    padding: 2em 0;
+  #social-nav {
     text-align: right;
-    text-transform: uppercase;
+  }
+}
 
-    ul.menu {
-      > li {
-        margin-left: 2em;
-      }
-    }
+#site-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  padding: 1em 0;
+  text-align: left;
+}
 
-    a {
-      display: block;
-      color: @textColor;
-      letter-spacing: 0.01875em;
-      text-decoration: none;
+#main-nav {
+  font-size: 0.875em;
+  padding: 2em 0;
+  text-align: right;
+  text-transform: uppercase;
+
+  ul.menu {
+    > li {
+      margin-left: 2em;
     }
+  }
+
+  a {
+    display: block;
+    color: @textColor;
+    letter-spacing: 0.01875em;
+    text-decoration: none;
   }
 }
