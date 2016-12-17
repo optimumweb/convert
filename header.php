@@ -7,7 +7,7 @@
             <div id="top">
                 <div class="<?php wpbp_container_class(); ?>">
                     <div class="grid_8 mobile-center">
-                        <div id="site-tagline">
+                        <div id="site-description">
                             <?php bloginfo('description'); ?>
                         </div>
                     </div>
@@ -23,9 +23,7 @@
             </div>
             <div class="<?php wpbp_container_class(); ?>">
                 <div class="grid_4">
-                    <hgroup id="site-title">
-                        <h1><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h1>
-                    </hgroup>
+                    <h1 id="site-title"><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h1>
                 </div>
                 <div class="grid_8">
                     <nav id="main-nav" role="navigation">
