@@ -1,7 +1,7 @@
 <?php get_template_part('head'); ?>
 <?php wpbp_wrap_before(); ?>
     <div id="wrap" role="document">
-    <?php wpbp_header_before(); ?>
+        <?php wpbp_header_before(); ?>
         <header id="header" role="banner">
             <?php wpbp_header_inside_before(); ?>
             <div id="top-bar">
@@ -30,4 +30,9 @@
             </div>
             <?php wpbp_header_inside_after(); ?>
         </header>
-    <?php wpbp_header_after(); ?>
+        <?php wpbp_header_after(); ?>
+        <?php if ( is_front_page() ) : ?>
+            <section id="hero">
+                <?php dynamic_sidebar("Hero"); ?>
+            </section>
+        <?php endif; ?>

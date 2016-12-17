@@ -16,10 +16,12 @@ add_action('init', 'enqueue');
 
 function convert_init()
 {
+	load_theme_textdomain('convert', THEME_DIRECTORY . '/lang');
+
 	register_nav_menus(array(
 		'social_navigation' => __("Social Navigation", 'convert')
 	));
 
-	load_theme_textdomain('convert', THEME_DIRECTORY . '/lang');
+	wpbp_register_sidebars(array( "Hero" ));
 }
 add_action('init', 'convert_init');
