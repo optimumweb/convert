@@ -6,10 +6,10 @@
             <?php wpbp_header_inside_before(); ?>
             <div id="top">
                 <div class="<?php wpbp_container_class(); ?>">
-                    <div class="grid_4">
-
-                    </div>
                     <div class="grid_8">
+                        <?php bloginfo('description'); ?>
+                    </div>
+                    <div class="grid_4">
                         <nav id="social-nav" role="navigation">
                             <div class="container">
                                 <?php wp_nav_menu(array( 'theme_location' => 'social_navigation' )); ?>
@@ -23,7 +23,6 @@
                 <div class="grid_4">
                     <hgroup id="site-title">
                         <h1><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h1>
-                        <h3><?php bloginfo('description'); ?></h3>
                     </hgroup>
                 </div>
                 <div class="grid_8">
