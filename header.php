@@ -8,7 +8,7 @@
                 <div class="<?php wpbp_container_class(); ?>">
                     <div class="grid_8 mobile-center">
                         <div id="site-description">
-                            <?php bloginfo('description'); ?>
+                            <?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>
                         </div>
                     </div>
                     <div class="grid_4 text-right mobile-center">
