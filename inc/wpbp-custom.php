@@ -22,6 +22,6 @@ function convert_init()
 		'social_navigation' => __("Social Navigation", 'convert')
 	));
 
-	wpbp_register_sidebars(array( "Hero" ));
+	wpbp_register_sidebars(array( "Hero", "Footer" ));
 }
 add_action('init', 'convert_init');
