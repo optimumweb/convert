@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="<?php wpbp_container_class(); ?>">
-                <div class="grid_4">
+                <div class="grid_4 mobile-center">
                     <h1 id="site-title"><a href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a></h1>
                 </div>
                 <div class="grid_8 text-right mobile-center">
