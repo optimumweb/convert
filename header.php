@@ -11,17 +11,19 @@
                             <?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>
                         </div>
                     </div>
-                    <div class="grid_2 text-center">
-                        <?php if ( function_exists('of_get_option') && of_get_option('tel') ) : ?>
-                            <div id="site-tel">
-                                <i class="fa fa-phone"></i> <?php echo of_get_option('tel'); ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                    <div class="grid_4 text-right mobile-center">
-                        <nav id="social-nav" role="navigation">
-                            <?php wp_nav_menu(array( 'theme_location' => 'social_navigation' )); ?>
-                        </nav>
+                    <div class="grid_6 text-right mobile-center">
+                        <ul id="site-toolbar">
+                            <?php if ( function_exists('of_get_option') && of_get_option('tel') ) : ?>
+                                <li id="site-tel">
+                                    <i class="fa fa-phone"></i> <?php echo of_get_option('tel'); ?>
+                                </li>
+                            <?php endif; ?>
+                            <li>
+                                <nav id="social-nav" role="navigation">
+                                    <?php wp_nav_menu(array( 'theme_location' => 'social_navigation' )); ?>
+                                </nav>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
