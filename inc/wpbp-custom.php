@@ -13,3 +13,13 @@ function enqueue() {
 	}
 }
 add_action('init', 'enqueue');
+
+function convert_init()
+{
+	register_nav_menus(array(
+		'social_navigation' => __("Social Navigation", 'convert')
+	));
+
+	load_theme_textdomain('convert', THEME_DIRECTORY . '/lang');
+}
+add_action('init', 'convert_init');
