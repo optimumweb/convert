@@ -49,28 +49,11 @@ p {
   a {
     color: @white;
   }
+}
 
-  #site-description {
-    padding: 0.5rem 0;
-    line-height: 1.5rem;
-  }
-
-  #site-toolbar {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    line-height: 2.5rem;
-
-    > li {
-      display: inline-block;
-      padding: 0 1em;
-      border-left: 1px solid @white20;
-
-      &:first-child {
-        border-left: none;
-      }
-    }
-  }
+#site-description {
+  padding: 0.5rem 0;
+  line-height: 1.5rem;
 }
 
 #site-title {
@@ -86,29 +69,23 @@ p {
 }
 
 #main-nav {
-  padding: 2rem 0;
   font-size: 0.875em;
   text-transform: uppercase;
+  background-color: darken(@purple, 10%);
 
   ul.menu {
     > li {
       display: inline-block;
-      margin-left: 2em;
     }
   }
 
   a {
     display: block;
-    line-height: 2rem;
-    color: @darkTextColor;
+    padding: 0.5em 2em;
+    color: @white;
     font-weight: bold;
     letter-spacing: 0.01875em;
     text-decoration: none;
-    .transition();
-
-    &:hover {
-      color: @purple;
-    }
   }
 }
 
