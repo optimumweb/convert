@@ -7,7 +7,9 @@
             <div id="top">
                 <div class="<?php wpbp_container_class(); ?>">
                     <div class="grid_8 mobile-center">
-                        <?php bloginfo('description'); ?>
+                        <div id="site-tagline">
+                            <?php bloginfo('description'); ?>
+                        </div>
                     </div>
                     <div class="grid_4 text-right mobile-text-center">
                         <nav id="social-nav" role="navigation">
