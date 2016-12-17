@@ -6,7 +6,7 @@
             <?php wpbp_header_inside_before(); ?>
             <div id="top">
                 <div class="<?php wpbp_container_class(); ?>">
-                    <div class="grid_8 mobile-text-center">
+                    <div class="grid_8 mobile-center">
                         <?php bloginfo('description'); ?>
                     </div>
                     <div class="grid_4 text-right mobile-text-center">
