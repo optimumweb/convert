@@ -49,7 +49,7 @@ function convert_compile_lesscss()
 
 			if ( function_exists('of_get_option') ) {
 				$less->setVariables(array(
-					'primaryColor' => of_get_option('primary_color')
+					'primaryColor' => of_get_option('primary_color') ? '#' . of_get_option('primary_color') : null
 				));
 			}
 
