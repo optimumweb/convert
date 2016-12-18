@@ -52,8 +52,6 @@ function convert_compile_lesscss()
 			)));
 		}
 
-		var_dump($variables);
-
 		$less->setVariables($variables);
 
 		$input  = THEME_DIRECTORY . '/css/master.less';
