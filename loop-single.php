@@ -3,6 +3,11 @@
     <?php wpbp_post_before(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <?php wpbp_post_inside_before(); ?>
+        <?php if ( has_post_thumbnail() ) : ?>
+            <div class="post-thumbnail">
+                <?php the_post_thumbnail('large'); ?>
+            </div>
+        <?php endif; ?>
         <header class="post-header">
             <div class="post-meta">
                 <time class="post-date updated" datetime="<?php the_time('c'); ?>" pubdate><?php printf(__('Posted on %s', 'wpbp'), get_the_time(__('l, F jS, Y', 'wpbp'))); ?></time>
@@ -12,11 +17,6 @@
                 <?php the_title(); ?>
             </h1>
         </header>
-        <?php if ( has_post_thumbnail() ) : ?>
-            <div class="post-thumbnail">
-                <?php the_post_thumbnail('large'); ?>
-            </div>
-        <?php endif; ?>
         <section class="post-content">
             <?php the_content(); ?>
         </section>
