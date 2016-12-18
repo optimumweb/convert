@@ -77,6 +77,7 @@ input[type="submit"] {
 .box {
   margin-bottom: 2em;
   padding: 2em;
+  background-color: @white;
   border: 3px solid @borderColor;
   .border-radius(@borderRadius);
 }
@@ -220,5 +221,14 @@ input[type="submit"] {
   #bottom-bar {
     padding: 1em 0;
     background-color: @black20;
+  }
+}
+
+body {
+  &.home {
+    #sidebar {
+      position: relative;
+      top: -240px;
+    }
   }
 }
