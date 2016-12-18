@@ -12,14 +12,14 @@
                     <ul id="social-links">
                         <?php if ( of_get_option('twitter_url') ) : ?>
                             <li>
-                                <a href="<?php echo of_get_option('twitter_url'); ?>">
+                                <a href="<?php echo of_get_option('twitter_url'); ?>" target="_blank">
                                     <i class="fa fa-twitter"></i>
                                 </a>
                             </li>
                         <?php endif; ?>
                         <?php if ( of_get_option('facebook_url') ) : ?>
                             <li>
-                                <a href="<?php echo of_get_option('facebook_url'); ?>">
+                                <a href="<?php echo of_get_option('facebook_url'); ?>" target="_blank">
                                     <i class="fa fa-facebook"></i>
                                 </a>
                             </li>
