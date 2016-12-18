@@ -226,13 +226,40 @@ input[type="submit"] {
   ul.menu {
     > li {
       display: inline-block;
+      position: relative;
+
+      > a {
+        color: @white;
+      }
+
+      > ul.sub-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1em;
+        background-color: @white;
+
+        > li {
+          display: block;
+
+          > a {
+            color: @primaryColor;
+          }
+        }
+      }
+
+      &:hover {
+        > ul.sub-menu {
+          display: block;
+        }
+      }
     }
   }
 
   a {
     display: block;
-    padding: 1em 2em;
-    color: @white;
+    padding: 1em;
     font-weight: bold;
     letter-spacing: 0.01875em;
     text-decoration: none;
