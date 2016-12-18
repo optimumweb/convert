@@ -23,7 +23,7 @@
                     <h1 id="site-title">
                         <a href="<?php echo home_url(); ?>/">
                             <?php if ( function_exists('of_get_option') && of_get_option('logo') ) : ?>
-                                <img id="site-logo" src="<?php echo of_get_option('logo'); ?>" alt="<?php bloginfo('name'); ?>" />
+                                <img id="site-logo" src="<?php echo of_get_option('logo'); ?>" alt="<?php of_get_option('business_name') ? of_get_option('business_name') : bloginfo('name'); ?>" />
                             <?php else : ?>
                                 <?php bloginfo('name'); ?>
                             <?php endif; ?>
