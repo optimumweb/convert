@@ -265,6 +265,16 @@ input[type="submit"] {
         }
       }
 
+      &.menu-item-has-children {
+        > a {
+          &:after {
+            display: inline-block;
+            content: "\f078";
+            font-family: 'FontAwesome';
+          }
+        }
+      }
+
       &:hover {
         > ul.sub-menu {
           display: block;
