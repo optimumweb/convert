@@ -154,11 +154,16 @@ input[type="submit"] {
 ul.checkmarks {
   list-style: none;
 
-  > li:before {
-    font-family: 'FontAwesome', sans-serif;
-    content: "\f00c";
-    margin-right: 1em;
-    margin-left: -2em;
+  > li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+    &:before {
+      font-family: 'FontAwesome', sans-serif;
+      content: "\f00c";
+      margin-right: 1em;
+      margin-left: -2em;
+    }
   }
 }
 
