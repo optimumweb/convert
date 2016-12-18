@@ -66,7 +66,7 @@
                 <?php if ( is_front_page() ) : ?>
                     <div class="grid_7">
                         <?php if ( function_exists('of_get_option') && of_get_option('front_page_hero') ) : ?>
-                            <?php echo of_get_option('front_page_hero'); ?>
+                            <?php echo apply_filters('the_content', of_get_option('front_page_hero')); ?>
                         <?php endif; ?>
                     </div>
                 <?php else : ?>
