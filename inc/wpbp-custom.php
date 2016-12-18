@@ -38,7 +38,7 @@ function convert_compile_lesscss()
 			'primaryColor' => '#ff0000'
 		));
 
-		$less->compileFile(THEME_DIRECTORY . '/css/master.less');
+		$less->compileFile(THEME_DIRECTORY . '/css/master.less', THEME_DIRECTORY . '/css/master.css');
 
 	} catch ( Exception $e ) {
 		echo $e;
