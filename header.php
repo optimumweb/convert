@@ -64,7 +64,11 @@
         <section id="hero" style="<?php echo function_exists('of_get_option') && of_get_option('hero_cover') ? 'background-image: url(' . of_get_option('hero_cover') . ');' : ''; ?>);">
             <div class="<?php wpbp_container_class(); ?>">
                 <?php if ( is_front_page() ) : ?>
-                    <?php dynamic_sidebar("Hero"); ?>
+                    <div class="grid_7">
+                        <?php if ( function_exists('of_get_option') && of_get_option('front_page_cover') ) : ?>
+                            <?php echo of_get_option('front_page_cover'); ?>
+                        <?php endif; ?>
+                    </div>
                 <?php else : ?>
                     <div class="grid_12">
                         <?php if ( function_exists('yoast_breadcrumb') ) : ?>
