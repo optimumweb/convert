@@ -9,22 +9,24 @@
                     </div>
                 </div>
                 <div class="grid_4 text-right mobile-center">
-                    <ul id="social-links">
-                        <?php if ( of_get_option('twitter_url') ) : ?>
-                            <li>
-                                <a href="<?php echo of_get_option('twitter_url'); ?>" target="_blank">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </li>
-                        <?php endif; ?>
-                        <?php if ( of_get_option('facebook_url') ) : ?>
-                            <li>
-                                <a href="<?php echo of_get_option('facebook_url'); ?>" target="_blank">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </li>
-                        <?php endif; ?>
-                    </ul>
+                    <?php if ( function_exists('of_get_option') ) : ?>
+                        <ul id="social-links">
+                            <?php if ( of_get_option('twitter_url') ) : ?>
+                                <li>
+                                    <a href="<?php echo of_get_option('twitter_url'); ?>" target="_blank">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                            <?php if ( of_get_option('facebook_url') ) : ?>
+                                <li>
+                                    <a href="<?php echo of_get_option('facebook_url'); ?>" target="_blank">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                        </ul>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
