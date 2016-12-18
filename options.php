@@ -62,6 +62,12 @@ function optionsframework_options()
     );
 
     $options[] = array(
+        'name' => __("Front Page Hero", 'convert'),
+        'id'   => 'front_page_hero',
+        'type' => 'editor'
+    );
+
+    $options[] = array(
         'name' => __("Social Media Settings", 'convert'),
         'type' => 'heading'
     );
