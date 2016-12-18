@@ -48,10 +48,14 @@
             </div>
         </nav>
         <?php wpbp_header_after(); ?>
-        <?php if ( is_front_page() ) : ?>
+        <?php if ( is_front_page() || is_single() ) : ?>
             <section id="hero" style="<?php echo function_exists('of_get_option') && of_get_option('hero_cover') ? 'background-image: url(' . of_get_option('hero_cover') . ');' : ''; ?>);">
                 <div class="<?php wpbp_container_class(); ?>">
-                    <?php dynamic_sidebar("Hero"); ?>
+                    <?php if ( is_front_page() ) : ?>
+                        <?php dynamic_sidebar("Hero"); ?>
+                    <?php elseif ( is_single() ) : ?>
+                        <h1 class="text-center"><?php echo get_the_title(); ?></h1>
+                    <?php endif; ?>
                 </div>
             </section>
         <?php endif; ?>
