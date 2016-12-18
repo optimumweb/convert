@@ -40,6 +40,8 @@ function convert_compile_lesscss()
 
 		$less->compileFile(THEME_DIRECTORY . '/css/master.less');
 
-	} catch ( Exception $e ) {}
+	} catch ( Exception $e ) {
+		echo $e;
+	}
 }
 add_action('init', 'convert_compile_lesscss');
