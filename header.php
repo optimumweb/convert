@@ -55,6 +55,9 @@
                         <?php dynamic_sidebar("Hero"); ?>
                     <?php elseif ( is_single() ) : ?>
                         <div class="grid_12 text-center">
+                            <?php if ( function_exists('yoast_breadcrumb') ) : ?>
+                                <?php yoast_breadcrumb('<div id="breadcrumbs">','</div>'); ?>
+                            <?php endif; ?>
                             <h1><?php echo get_the_title(); ?></h1>
                         </div>
                     <?php endif; ?>
