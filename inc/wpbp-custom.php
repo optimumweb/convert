@@ -28,24 +28,43 @@ add_action('init', 'convert_init');
 
 function convert_compile_lesscss()
 {
-	require_once THEME_DIRECTORY . '/inc/lessphp/lessc.inc.php';
+	$input  = THEME_DIRECTORY . '/css/master.less';
+	$output = THEME_DIRECTORY . '/css/master.css';
 
-	try {
+	$old_css_md5 = get_option('convert_css_md5');
 
-		$less = new lessc;
+	if ( file_exists($output) ) {
+		$new_css_md5 = md5(file_get_contents($output));
+	} else {
+		$new_css_md5 = null;
+	}
 
-		if ( function_exists('of_get_option') ) {
-			$less->setVariables(array(
-				'primaryColor' => of_get_option('primary_color')
-			));
+	if ( $new_css_md5 != $old_css_md5 || $new_css_md5 === null ) {
+
+		require_once THEME_DIRECTORY . '/inc/lessphp/lessc.inc.php';
+
+		try {
+
+			$less = new lessc;
+
+			if ( function_exists('of_get_option') ) {
+				$less->setVariables(array(
+					'primaryColor' => of_get_option('primary_color')
+				));
+			}
+
+			$less->compileFile($input, $output);
+
+			$new_css_md5 = md5(file_get_contents($output));
+
+			update_option('convert_css_md5', $new_css_md5);
+
+		} catch ( Exception $e ) {
+			if ( is_user_logged_in() ) {
+				echo $e;
+			}
 		}
 
-		$less->compileFile(THEME_DIRECTORY . '/css/master.less', THEME_DIRECTORY . '/css/master.css');
-
-	} catch ( Exception $e ) {
-		if ( is_user_logged_in() ) {
-			echo $e;
-		}
 	}
 }
 add_action('init', 'convert_compile_lesscss');
