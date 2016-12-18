@@ -43,7 +43,9 @@ function convert_compile_lesscss()
 		$less->compileFile(THEME_DIRECTORY . '/css/master.less', THEME_DIRECTORY . '/css/master.css');
 
 	} catch ( Exception $e ) {
-		echo $e;
+		if ( is_user_logged_in() ) {
+			echo $e;
+		}
 	}
 }
 add_action('init', 'convert_compile_lesscss');
