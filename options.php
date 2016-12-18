@@ -27,6 +27,8 @@ function optionsframework_option_name() {
 
 function optionsframework_options()
 {
+    $default_options = convert_default_options();
+
     $options = array();
 
     $options[] = array(
@@ -58,21 +60,35 @@ function optionsframework_options()
         'name' => __("Primary Color", 'convert'),
         'id'   => 'primary_color',
         'type' => 'color',
-        'std'  => '746aca'
+        'std'  => $default_options['primary_color']
     );
 
     $options[] = array(
         'name' => __("Complimentary Color", 'convert'),
         'id'   => 'complimentary_color',
         'type' => 'color',
-        'std'  => '3c3769'
+        'std'  => $default_options['complimentary_color']
     );
 
     $options[] = array(
         'name' => __("Contrast Color", 'convert'),
         'id'   => 'contrast_color',
         'type' => 'color',
-        'std'  => 'fde428'
+        'std'  => $default_options['contrast_color']
+    );
+
+    $options[] = array(
+        'name' => __("Text Color", 'convert'),
+        'id'   => 'text_color',
+        'type' => 'color',
+        'std'  => $default_options['text_color']
+    );
+
+    $options[] = array(
+        'name' => __("Headings Color", 'convert'),
+        'id'   => 'headings_color',
+        'type' => 'color',
+        'std'  => $default_options['headings_color']
     );
 
     return $options;

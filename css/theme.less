@@ -10,7 +10,7 @@ body {
 
 h1, h2, h3 {
   font-family: @hFontFamily;
-  color: @darkTextColor;
+  color: @headingsColor;
   font-weight: normal;
 }
 
@@ -147,7 +147,7 @@ input[type="submit"] {
   font-size: 0.875em;
   margin: 0.5em 0;
   text-transform: uppercase;
-  color: @lightTextColor;
+  color: lighten(@textColor, 20%);
 }
 
 .post-thumbnail {
@@ -202,7 +202,7 @@ input[type="submit"] {
   margin: 0;
 
   a {
-    color: @darkTextColor;
+    color: @headingsColor;
     text-decoration: none;
   }
 }
@@ -210,7 +210,7 @@ input[type="submit"] {
 #site-tel {
   font-size: 2em;
   line-height: 6rem;
-  color: @darkTextColor;
+  color: @headingsColor;
 
   i {
     color: @primaryColor;
