@@ -18,7 +18,7 @@ function convert_init()
 {
 	load_theme_textdomain('convert', THEME_DIRECTORY . '/lang');
 
-	wpbp_register_sidebars(array( "Hero", "Footer" ));
+	wpbp_register_sidebars(array( "Footer" ));
 }
 add_action('init', 'convert_init');
 
