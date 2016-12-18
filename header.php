@@ -54,7 +54,9 @@
                     <?php if ( is_front_page() ) : ?>
                         <?php dynamic_sidebar("Hero"); ?>
                     <?php elseif ( is_single() ) : ?>
-                        <h1 class="text-center"><?php echo get_the_title(); ?></h1>
+                        <div class="grid_12 text-center">
+                            <h1><?php echo get_the_title(); ?></h1>
+                        </div>
                     <?php endif; ?>
                 </div>
             </section>
