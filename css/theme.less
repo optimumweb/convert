@@ -85,8 +85,11 @@ input[type="submit"] {
   margin-bottom: 2em;
   padding: 2em;
   background-color: @white;
-  .box-shadow(0, 0, 6px, @black40);
   .border-radius(@borderRadius);
+
+  &.box-shadow {
+    .box-shadow(0, 0, 6px, @black40);
+  }
 }
 
 .widget {
