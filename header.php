@@ -65,8 +65,8 @@
             <div class="<?php wpbp_container_class(); ?>">
                 <?php if ( is_front_page() ) : ?>
                     <div class="grid_7">
-                        <?php if ( function_exists('of_get_option') && of_get_option('front_page_cover') ) : ?>
-                            <?php echo of_get_option('front_page_cover'); ?>
+                        <?php if ( function_exists('of_get_option') && of_get_option('front_page_hero') ) : ?>
+                            <?php echo of_get_option('front_page_hero'); ?>
                         <?php endif; ?>
                     </div>
                 <?php else : ?>
