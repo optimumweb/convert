@@ -223,6 +223,28 @@ input[type="submit"] {
   background-color: @complimentaryColor;
   min-height: 0.25em;
 
+  a {
+    display: block;
+    font-weight: bold;
+    letter-spacing: 0.01875em;
+    text-decoration: none;
+  }
+
+  #main-nav-toggle {
+    display: none;
+    color: @white;
+    position: relative;
+
+    &:after {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      content: "\f0c9";
+      font-family: 'FontAwesome', sans-serif;
+      padding-left: 1em;
+    }
+  }
+
   ul.menu {
     > li {
       display: inline-block;
@@ -286,13 +308,6 @@ input[type="submit"] {
         }
       }
     }
-  }
-
-  a {
-    display: block;
-    font-weight: bold;
-    letter-spacing: 0.01875em;
-    text-decoration: none;
   }
 }
 

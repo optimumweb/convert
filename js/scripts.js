@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
-    // put your jquery code here
+    $('#main-nav-toggle').on('click', function() {
+        $('#main-nav .menu').slideToggle();
+    });
 
 });
