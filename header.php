@@ -50,6 +50,8 @@
         <?php wpbp_header_after(); ?>
         <?php if ( is_front_page() ) : ?>
             <section id="hero" style="<?php echo function_exists('of_get_option') && of_get_option('hero_cover') ? 'background-image: url(' . of_get_option('hero_cover') . ');' : ''; ?>);">
-                <?php dynamic_sidebar("Hero"); ?>
+                <div class="<?php wpbp_container_class(); ?>">
+                    <?php dynamic_sidebar("Hero"); ?>
+                </div>
             </section>
         <?php endif; ?>
