@@ -43,6 +43,12 @@ function optionsframework_options()
     );
 
     $options[] = array(
+        'name' => __("Hero Cover", 'convert'),
+        'id'   => 'hero_cover',
+        'type' => 'upload'
+    );
+
+    $options[] = array(
         'name' => __("Phone Number", 'convert'),
         'id'   => 'tel',
         'type' => 'text'
