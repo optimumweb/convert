@@ -320,9 +320,17 @@ input[type="submit"] {
   }
 }
 
-#searchsubmit {
-  font-family: FontAwesome;
-  float: right;
+#searchform {
+  #searchsubmit {
+    font-family: FontAwesome;
+    float: right;
+    font-size: 0.95rem;
+    .multi-border-radius(0, @borderRadius, @borderRadius, 0);
+  }
+
+  #s {
+    .multi-border-radius(@borderRadius, 0, 0, @borderRadius);
+  }
 }
 
 body {
