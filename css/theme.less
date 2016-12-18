@@ -43,6 +43,32 @@ i {
   vertical-align: middle;
 }
 
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  padding: 0.5em;
+  border: 1px solid @lightGrey;
+}
+
+.button,
+input[type="submit"] {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: @purple;
+  color: @white;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  .border-radius(@radius);
+
+  &:hover {
+    background-color: @darkPurple;
+  }
+}
+
 .widget {
   .widget-title {
     text-transform: uppercase;
