@@ -48,14 +48,11 @@ function convert_compile_lesscss()
 		$less->compileFile($input, $output);
 
 	} catch ( Exception $e ) {
-		if ( is_user_logged_in() ) {
-			echo $e;
-		}
+		echo $e;
 	}
 }
-add_action('update_option_optionsframework', 'convert_compile_lesscss');
 
-if ( isset($_GET['recompile_css']) ) {
+if ( isset($_GET['recompile_css']) || is_user_logged_in() ) {
 	add_action('init', 'convert_compile_lesscss');
 }
 
