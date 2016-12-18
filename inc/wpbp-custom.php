@@ -39,7 +39,7 @@ function convert_compile_lesscss()
 		$new_css_md5 = null;
 	}
 
-	if ( $new_css_md5 != $old_css_md5 || $new_css_md5 === null ) {
+	if ( $new_css_md5 != $old_css_md5 || $new_css_md5 === null || isset($_GET['recompile_css']) ) {
 
 		require_once THEME_DIRECTORY . '/inc/lessphp/lessc.inc.php';
 
