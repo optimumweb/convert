@@ -84,8 +84,18 @@ input[type="submit"] {
   .transition();
 
   &:hover {
-    color: @white;
     background-color: @darkPurple;
+    color: @white;
+  }
+
+  &.button-yellow {
+    background-color: @yellow;
+    color: @black;
+
+    &:hover {
+      background-color: darken(@yellow, 10%);
+      color: @black;
+    }
   }
 }
 
