@@ -129,8 +129,6 @@ input[type="submit"] {
 }
 
 #social-nav {
-  line-height: 2.5rem;
-
   ul.menu > li {
     display: inline-block;
     padding: 0 1em;
@@ -138,6 +136,16 @@ input[type="submit"] {
 
     &:first-child {
       border-left: none;
+    }
+  }
+
+  a {
+    color: @white60;
+    line-height: 2.5rem;
+
+    &:hover {
+      color: @white;
+      background-color: @black20;
     }
   }
 }
