@@ -32,6 +32,11 @@ function optionsframework_options()
     $options = array();
 
     $options[] = array(
+        'name' => __("Basic Settings", 'convert'),
+        'type' => 'heading'
+    );
+
+    $options[] = array(
         'name' => __("Business Name", 'convert'),
         'id'   => 'business_name',
         'type' => 'text'
