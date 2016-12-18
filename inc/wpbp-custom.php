@@ -38,11 +38,11 @@ function convert_compile_lesscss()
 
 		if ( function_exists('of_get_option') ) {
 			$less->setVariables(array(
-				'primaryColor'       => '#' . of_get_option('primary_color', $default_options['primary_color']),
-				'complimentaryColor' => '#' . of_get_option('complimentary_color', $default_options['complimentary_color']),
-				'contrastColor'      => '#' . of_get_option('contrast_color', $default_options['contrast_color']),
-				'textColor'          => '#' . of_get_option('text_color', $default_options['text_color']),
-				'headingsColor'      => '#' . of_get_option('headings_color', $default_options['headings_color'])
+				'primaryColor'       => of_get_option('primary_color', $default_options['primary_color']),
+				'complimentaryColor' => of_get_option('complimentary_color', $default_options['complimentary_color']),
+				'contrastColor'      => of_get_option('contrast_color', $default_options['contrast_color']),
+				'textColor'          => of_get_option('text_color', $default_options['text_color']),
+				'headingsColor'      => of_get_option('headings_color', $default_options['headings_color'])
 			));
 		}
 
@@ -67,10 +67,10 @@ add_action('optionsframework_after_validate', 'convert_compile_lesscss');
 function convert_default_options()
 {
 	return array(
-		'primary_color'       => '746aca',
-		'complimentary_color' => '3c3769',
-		'contrast_color'      => 'fde428',
-		'text_color'          => '646464',
-		'headings_color'      => '444444'
+		'primary_color'       => '#746aca',
+		'complimentary_color' => '#3c3769',
+		'contrast_color'      => '#fde428',
+		'text_color'          => '#646464',
+		'headings_color'      => '#444444'
 	);
 }
