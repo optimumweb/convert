@@ -43,12 +43,12 @@ function convert_compile_lesscss()
 
 		if ( function_exists('of_get_option') ) {
 			$variables = array_merge($variables, array(
-				'primaryColor'       => of_get_option('primary_color'),
-				'complimentaryColor' => of_get_option('complimentary_color'),
-				'contrastColor'      => of_get_option('contrast_color'),
-				'textColor'          => of_get_option('text_color'),
-				'headingsColor'      => of_get_option('headings_color'),
-				'contrastTextColor'  => of_get_option('contrast_text_color')
+				'primaryColor'       => of_get_option('primary_color', null),
+				'complimentaryColor' => of_get_option('complimentary_color', null),
+				'contrastColor'      => of_get_option('contrast_color', null),
+				'textColor'          => of_get_option('text_color', null),
+				'headingsColor'      => of_get_option('headings_color', null),
+				'contrastTextColor'  => of_get_option('contrast_text_color', null)
 			));
 		}
 
