@@ -53,14 +53,16 @@
             </div>
             <?php wpbp_header_inside_after(); ?>
         </header>
-        <nav id="main-nav" role="navigation">
-            <div class="<?php wpbp_container_class(); ?>">
-                <div class="grid_12">
-                    <a class="menu-toggle" href="#menu-primary-navigation"><?php _e("Menu", 'convert'); ?></a>
-                    <?php wp_nav_menu(array( 'theme_location' => 'primary_navigation' )); ?>
+        <?php if ( has_nav_menu('primary_navigation') ) : ?>
+            <nav id="main-nav" role="navigation">
+                <div class="<?php wpbp_container_class(); ?>">
+                    <div class="grid_12">
+                        <a class="menu-toggle" href="#menu-primary-navigation"><?php _e("Menu", 'convert'); ?></a>
+                        <?php wp_nav_menu(array( 'theme_location' => 'primary_navigation' )); ?>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        <?php endif; ?>
         <?php wpbp_header_after(); ?>
         <section id="hero" style="<?php echo function_exists('of_get_option') && of_get_option('hero_cover') ? 'background-image: url(' . of_get_option('hero_cover') . ');' : ''; ?>);">
             <div class="<?php wpbp_container_class(); ?>">
