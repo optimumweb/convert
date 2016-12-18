@@ -56,7 +56,7 @@
         <nav id="main-nav" role="navigation">
             <div class="<?php wpbp_container_class(); ?>">
                 <div class="grid_12">
-                    <a id="main-nav-toggle" href="#"><?php _e("Menu", 'convert'); ?></a>
+                    <a class="menu-toggle" href="#menu-primary-navigation"><?php _e("Menu", 'convert'); ?></a>
                     <?php wp_nav_menu(array( 'theme_location' => 'primary_navigation' )); ?>
                 </div>
             </div>
