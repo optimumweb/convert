@@ -18,10 +18,6 @@ function convert_init()
 {
 	load_theme_textdomain('convert', THEME_DIRECTORY . '/lang');
 
-	register_nav_menus(array(
-		'social_navigation' => __("Social Navigation", 'convert')
-	));
-
 	wpbp_register_sidebars(array( "Hero", "Footer" ));
 }
 add_action('init', 'convert_init');
