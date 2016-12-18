@@ -28,45 +28,34 @@ add_action('init', 'convert_init');
 
 function convert_compile_lesscss()
 {
-	$input  = THEME_DIRECTORY . '/css/master.less';
-	$output = THEME_DIRECTORY . '/css/master.css';
+	require_once THEME_DIRECTORY . '/inc/lessphp/lessc.inc.php';
 
-	$old_css_md5 = get_option('convert_css_md5');
+	try {
 
-	if ( file_exists($output) ) {
-		$new_css_md5 = md5(file_get_contents($output));
-	} else {
-		$new_css_md5 = null;
-	}
+		$less = new lessc;
 
-	if ( $new_css_md5 != $old_css_md5 || $new_css_md5 === null || isset($_GET['recompile_css']) ) {
-
-		require_once THEME_DIRECTORY . '/inc/lessphp/lessc.inc.php';
-
-		try {
-
-			$less = new lessc;
-
-			if ( function_exists('of_get_option') ) {
-				$less->setVariables(array(
-					'primaryColor'       => of_get_option('primary_color') ? '#' . of_get_option('primary_color') : null,
-					'complimentaryColor' => of_get_option('complimentary_color') ? '#' . of_get_option('complimentary_color') : null,
-					'contrastColor'      => of_get_option('contrast_color') ? '#' . of_get_option('contrast_color') : null
-				));
-			}
-
-			$less->compileFile($input, $output);
-
-			$new_css_md5 = md5(file_get_contents($output));
-
-			update_option('convert_css_md5', $new_css_md5);
-
-		} catch ( Exception $e ) {
-			if ( is_user_logged_in() ) {
-				echo $e;
-			}
+		if ( function_exists('of_get_option') ) {
+			$less->setVariables(array(
+				'primaryColor'       => of_get_option('primary_color') ? '#' . of_get_option('primary_color') : null,
+				'complimentaryColor' => of_get_option('complimentary_color') ? '#' . of_get_option('complimentary_color') : null,
+				'contrastColor'      => of_get_option('contrast_color') ? '#' . of_get_option('contrast_color') : null
+			));
 		}
 
+		$input  = THEME_DIRECTORY . '/css/master.less';
+		$output = THEME_DIRECTORY . '/css/master.css';
+
+		$less->compileFile($input, $output);
+
+	} catch ( Exception $e ) {
+		if ( is_user_logged_in() ) {
+			echo $e;
+		}
 	}
 }
-add_action('init', 'convert_compile_lesscss');
+
+if ( isset($_GET['recompile_css']) ) {
+	add_action('init', 'convert_compile_lesscss');
+}
+
+add_action('optionsframework_after_validate', 'convert_compile_lesscss');
