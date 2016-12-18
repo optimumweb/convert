@@ -32,16 +32,27 @@ function convert_compile_lesscss()
 
 		$less = new lessc;
 
+		$variables = array(
+			'primaryColor'       => $default_options['primary_color'],
+			'complimentaryColor' => $default_options['complimentary_color'],
+			'contrastColor'      => $default_options['contrast_color'],
+			'textColor'          => $default_options['text_color'],
+			'headingsColor'      => $default_options['headings_color'],
+			'contrastTextColor'  => $default_options['contrast_text_color']
+		);
+
 		if ( function_exists('of_get_option') ) {
-			$less->setVariables(array(
-				'primaryColor'       => of_get_option('primary_color', $default_options['primary_color']),
-				'complimentaryColor' => of_get_option('complimentary_color', $default_options['complimentary_color']),
-				'contrastColor'      => of_get_option('contrast_color', $default_options['contrast_color']),
-				'textColor'          => of_get_option('text_color', $default_options['text_color']),
-				'headingsColor'      => of_get_option('headings_color', $default_options['headings_color']),
-				'contrastTextColor'  => of_get_option('contrast_text_color', $default_options['contrast_text_color'])
+			$variables = array_merge($variables, array(
+				'primaryColor'       => of_get_option('primary_color'),
+				'complimentaryColor' => of_get_option('complimentary_color'),
+				'contrastColor'      => of_get_option('contrast_color'),
+				'textColor'          => of_get_option('text_color'),
+				'headingsColor'      => of_get_option('headings_color'),
+				'contrastTextColor'  => of_get_option('contrast_text_color')
 			));
 		}
+
+		$less->setVariables($variables);
 
 		$input  = THEME_DIRECTORY . '/css/master.less';
 		$output = THEME_DIRECTORY . '/css/master.css';
