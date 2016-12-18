@@ -25,3 +25,21 @@ function convert_init()
 	wpbp_register_sidebars(array( "Hero", "Footer" ));
 }
 add_action('init', 'convert_init');
+
+function convert_compile_lesscss()
+{
+	require_once THEME_DIRECTORY . '/inc/lessphp/lessc.inc.php';
+
+	try {
+
+		$less = new lessc;
+
+		$less->setVariables(array(
+			'primaryColor' => '#ff0000'
+		));
+
+		$less->compileFile(THEME_DIRECTORY . '/css/master.less');
+
+	} catch ( Exception $e ) {}
+}
+add_action('init', 'convert_compile_lesscss');
