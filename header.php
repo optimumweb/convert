@@ -32,9 +32,9 @@
                 </div>
                 <div class="grid_8 text-right mobile-center">
                     <?php if ( function_exists('of_get_option') && of_get_option('tel') ) : ?>
-                        <div id="site-tel">
+                        <a id="site-tel" href="tel:<?php echo preg_replace("/[^0-9]/", "", of_get_option('tel')); ?>">
                             <i class="fa fa-phone"></i> <?php echo of_get_option('tel'); ?>
-                        </div>
+                        </a>
                     <?php endif; ?>
                 </div>
             </div>
