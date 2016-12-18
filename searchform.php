@@ -3,4 +3,5 @@
     <div style="overflow: hidden;">
         <input type="text" value="" name="s" id="s" placeholder="<?php _e('Search', 'wpbp'); ?>">
     </div>
+    <div class="clear"></div>
 </form>
