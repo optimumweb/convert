@@ -32,7 +32,7 @@ a {
   .transition();
 
   &:hover {
-    color: darken(@primaryColor, 15%);
+    color: @complimentaryColor;
   }
 }
 
@@ -84,7 +84,7 @@ input[type="submit"] {
   .transition();
 
   &:hover {
-    background-color: darken(@primaryColor, 15%);
+    background-color: @complimentaryColor;
     color: @white;
   }
 
@@ -93,12 +93,12 @@ input[type="submit"] {
     text-align: center;
   }
 
-  &.button-yellow {
-    background-color: @yellow;
+  &.button-contrast {
+    background-color: @contrastColor;
     color: @black;
 
     &:hover {
-      background-color: @darkYellow;
+      background-color: darken(@contrastColor, 10%);
       color: @black;
     }
   }
@@ -113,8 +113,8 @@ input[type="submit"] {
     border: 1px solid @borderColor;
   }
 
-  &.box-yellow {
-    background-color: @yellow;
+  &.box-contrast {
+    background-color: @contrastColor;
     color: @black;
 
     h1, h2, h3, h4, h5, h6 {
@@ -220,7 +220,7 @@ input[type="submit"] {
 #main-nav {
   font-size: 0.875em;
   text-transform: uppercase;
-  background-color: darken(@primaryColor, 15%);
+  background-color: @complimentaryColor;
   min-height: 0.25em;
 
   ul.menu {

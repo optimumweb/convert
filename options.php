@@ -61,5 +61,19 @@ function optionsframework_options()
         'std'  => '746aca'
     );
 
+    $options[] = array(
+        'name' => __("Complimentary Color", 'convert'),
+        'id'   => 'complimentary_color',
+        'type' => 'color',
+        'std'  => '3c3769'
+    );
+
+    $options[] = array(
+        'name' => __("Contrast Color", 'convert'),
+        'id'   => 'contrast_color',
+        'type' => 'color',
+        'std'  => 'fde428'
+    );
+
     return $options;
 }
