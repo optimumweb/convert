@@ -27,12 +27,12 @@ h3 {
 }
 
 a {
-  color: @purple;
+  color: @primaryColor;
   text-decoration: none !important;
   .transition();
 
   &:hover {
-    color: @darkPurple;
+    color: darken(@primaryColor, 15%);
   }
 }
 
@@ -73,7 +73,7 @@ textarea {
 input[type="submit"] {
   display: inline-block;
   padding: 0.75em 1.25em;
-  background-color: @purple;
+  background-color: @primaryColor;
   color: @white;
   text-transform: uppercase;
   font-weight: bold;
@@ -84,7 +84,7 @@ input[type="submit"] {
   .transition();
 
   &:hover {
-    background-color: @darkPurple;
+    background-color: darken(@primaryColor, 15%);
     color: @white;
   }
 
@@ -213,14 +213,14 @@ input[type="submit"] {
   color: @darkTextColor;
 
   i {
-    color: @purple;
+    color: @primaryColor;
   }
 }
 
 #main-nav {
   font-size: 0.875em;
   text-transform: uppercase;
-  background-color: @darkPurple;
+  background-color: darken(@primaryColor, 15%);
   min-height: 0.25em;
 
   ul.menu {
@@ -242,7 +242,7 @@ input[type="submit"] {
 #hero {
   padding: 3em 0;
   color: @white;
-  background-color: @purple;
+  background-color: @primaryColor;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
