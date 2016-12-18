@@ -124,5 +124,12 @@ function optionsframework_options()
         'std'  => $default_options['headings_color']
     );
 
+    $options[] = array(
+        'name' => __("Contrast Text Color", 'convert'),
+        'id'   => 'contrast_text_color',
+        'type' => 'color',
+        'std'  => $default_options['contrast_text_color']
+    );
+
     return $options;
 }

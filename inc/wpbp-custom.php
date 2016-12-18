@@ -38,7 +38,8 @@ function convert_compile_lesscss()
 				'complimentaryColor' => of_get_option('complimentary_color', $default_options['complimentary_color']),
 				'contrastColor'      => of_get_option('contrast_color', $default_options['contrast_color']),
 				'textColor'          => of_get_option('text_color', $default_options['text_color']),
-				'headingsColor'      => of_get_option('headings_color', $default_options['headings_color'])
+				'headingsColor'      => of_get_option('headings_color', $default_options['headings_color']),
+				'contrastTextColor'  => of_get_option('contrast_text_color', $default_options['contrast_text_color'])
 			));
 		}
 
@@ -63,6 +64,7 @@ function convert_default_options()
 		'complimentary_color' => '#3c3769',
 		'contrast_color'      => '#fde428',
 		'text_color'          => '#646464',
-		'headings_color'      => '#444444'
+		'headings_color'      => '#444444',
+		'contrast_text_color' => '#000000'
 	);
 }
