@@ -57,12 +57,11 @@ function convert_compile_lesscss()
 		}
 	}
 }
+add_action('update_option_optionsframework', 'convert_compile_lesscss');
 
 if ( isset($_GET['recompile_css']) ) {
 	add_action('init', 'convert_compile_lesscss');
 }
-
-add_action('optionsframework_after_validate', 'convert_compile_lesscss');
 
 function convert_default_options()
 {
