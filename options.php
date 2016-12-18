@@ -54,5 +54,12 @@ function optionsframework_options()
         'type' => 'text'
     );
 
+    $options[] = array(
+        'name' => __("Primary Color", 'convert'),
+        'id'   => 'primary_color',
+        'type' => 'color',
+        'std'  => '746aca'
+    );
+
     return $options;
 }

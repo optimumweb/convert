@@ -34,9 +34,11 @@ function convert_compile_lesscss()
 
 		$less = new lessc;
 
-		$less->setVariables(array(
-			'primaryColor' => '#ff0000'
-		));
+		if ( function_exists('of_get_option') ) {
+			$less->setVariables(array(
+				'primaryColor' => of_get_option('primary_color')
+			));
+		}
 
 		$less->compileFile(THEME_DIRECTORY . '/css/master.less', THEME_DIRECTORY . '/css/master.css');
 
