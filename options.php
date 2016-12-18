@@ -62,6 +62,28 @@ function optionsframework_options()
     );
 
     $options[] = array(
+        'name' => __("Social Media Settings", 'convert'),
+        'type' => 'heading'
+    );
+
+    $options[] = array(
+        'name' => __("Twitter", 'convert'),
+        'id'   => 'twitter_url',
+        'type' => 'text'
+    );
+
+    $options[] = array(
+        'name' => __("Facebook", 'convert'),
+        'id'   => 'facebook_url',
+        'type' => 'text'
+    );
+
+    $options[] = array(
+        'name' => __("Color Settings", 'convert'),
+        'type' => 'heading'
+    );
+
+    $options[] = array(
         'name' => __("Primary Color", 'convert'),
         'id'   => 'primary_color',
         'type' => 'color',
