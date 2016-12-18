@@ -48,19 +48,16 @@
             </div>
         </nav>
         <?php wpbp_header_after(); ?>
-        <?php if ( is_front_page() || is_single() ) : ?>
-            <section id="hero" style="<?php echo function_exists('of_get_option') && of_get_option('hero_cover') ? 'background-image: url(' . of_get_option('hero_cover') . ');' : ''; ?>);">
-                <div class="<?php wpbp_container_class(); ?>">
-                    <?php if ( is_front_page() ) : ?>
-                        <?php dynamic_sidebar("Hero"); ?>
-                    <?php elseif ( is_single() ) : ?>
-                        <div class="grid_12 text-center">
-                            <?php if ( function_exists('yoast_breadcrumb') ) : ?>
-                                <?php yoast_breadcrumb('<div id="breadcrumbs">','</div>'); ?>
-                            <?php endif; ?>
-                            <h1><?php echo get_the_title(); ?></h1>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            </section>
-        <?php endif; ?>
+        <section id="hero" style="<?php echo function_exists('of_get_option') && of_get_option('hero_cover') ? 'background-image: url(' . of_get_option('hero_cover') . ');' : ''; ?>);">
+            <div class="<?php wpbp_container_class(); ?>">
+                <?php if ( is_front_page() ) : ?>
+                    <?php dynamic_sidebar("Hero"); ?>
+                <?php else : ?>
+                    <div class="grid_12">
+                        <?php if ( function_exists('yoast_breadcrumb') ) : ?>
+                            <?php yoast_breadcrumb('<div id="breadcrumbs">','</div>'); ?>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </section>
