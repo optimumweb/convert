@@ -33,6 +33,8 @@ function convert_compile_lesscss()
 		$less = new lessc;
 
 		$variables = array(
+			'baseFontFamily'     => $default_options['base_font_family'],
+			'hFontFamily'        => $default_options['heading_font_family'],
 			'primaryColor'       => $default_options['primary_color'],
 			'complimentaryColor' => $default_options['complimentary_color'],
 			'contrastColor'      => $default_options['contrast_color'],
@@ -43,6 +45,8 @@ function convert_compile_lesscss()
 
 		if ( function_exists('of_get_option') ) {
 			$variables = array_merge($variables, array_filter(array(
+				'baseFontFamily'     => of_get_option('base_font_family') ? of_get_option('base_font_family') : null,
+				'hFontFamily'        => of_get_option('heading_font_family') ? of_get_option('heading_font_family') : null,
 				'primaryColor'       => of_get_option('primary_color') ? of_get_option('primary_color') : null,
 				'complimentaryColor' => of_get_option('complimentary_color') ? of_get_option('complimentary_color') : null,
 				'contrastColor'      => of_get_option('contrast_color') ? of_get_option('contrast_color') : null,
@@ -71,11 +75,13 @@ if ( isset($_GET['recompile_css']) || is_user_logged_in() ) {
 function convert_default_options()
 {
 	return array(
-		'primary_color'       => '#746aca',
-		'complimentary_color' => '#3c3769',
-		'contrast_color'      => '#fde428',
-		'text_color'          => '#646464',
-		'headings_color'      => '#444444',
-		'contrast_text_color' => '#000000'
+		'base_font_family'    => "'Karla', sans-serif",
+		'heading_font_family' => "'Arvo', serif",
+		'primary_color'       => "#746aca",
+		'complimentary_color' => "#3c3769",
+		'contrast_color'      => "#fde428",
+		'text_color'          => "#646464",
+		'headings_color'      => "#444444",
+		'contrast_text_color' => "#000000"
 	);
 }

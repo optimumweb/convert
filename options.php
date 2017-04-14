@@ -85,6 +85,23 @@ function optionsframework_options()
     );
 
     $options[] = array(
+        'name' => __("Font Settings", 'convert'),
+        'type' => 'heading'
+    );
+
+    $options[] = array(
+        'name' => __("Base Font Family", 'convert'),
+        'id'   => 'base_font_family',
+        'type' => 'text'
+    );
+
+    $options[] = array(
+        'name' => __("Heading Font Family", 'convert'),
+        'id'   => 'heading_font_family',
+        'type' => 'text'
+    );
+
+    $options[] = array(
         'name' => __("Color Settings", 'convert'),
         'type' => 'heading'
     );
