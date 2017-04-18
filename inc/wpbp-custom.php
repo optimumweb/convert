@@ -16,10 +16,14 @@ add_action('init', 'enqueue');
 function convert_init()
 {
 	load_theme_textdomain('convert', THEME_DIRECTORY . '/lang');
-
-	wpbp_register_sidebars(array( "Footer" ));
 }
 add_action('init', 'convert_init');
+
+function convert_sidebars_init()
+{
+	wpbp_register_sidebars(array( "Footer" ));
+}
+add_action('widgets_init', 'convert_sidebars_init');
 
 function convert_compile_lesscss()
 {
