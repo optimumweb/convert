@@ -18,7 +18,9 @@
                     </div>
                     <div class="grid_4 text-right mobile-center">
                         <div id="copy">
-                            &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>
+                            <?php if ( of_get_option('business_name') ) : ?>
+                                &copy; <?php echo date('Y'); ?> <?php echo of_get_option('business_name'); ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
