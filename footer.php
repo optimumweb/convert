@@ -1,7 +1,7 @@
         <?php wpbp_footer_before(); ?>
         <footer id="footer" role="contentinfo">
             <?php wpbp_footer_inside_before(); ?>
-            <?php if ( is_active_sidebar("Footer") ) : ?>
+            <?php if ( is_dynamic_sidebar("Footer") ) : ?>
                 <div id="footer-widgets">
                     <div class="<?php wpbp_container_class(); ?>">
                         <?php dynamic_sidebar("Footer"); ?>
